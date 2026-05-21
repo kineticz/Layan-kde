@@ -127,7 +127,7 @@
      transform="matrix(1.1667,0,0,1.1667,68.667,-1081.7922)">
     <path
        id="path1705"
-       style="opacity:0.15;fill:url(#radialGradient994);stroke-width:0.999822"
+       style="opacity:0;fill:url(#radialGradient994);stroke-width:0.999822"
        d="m -27.999486,926.36684 v 18.85158 l 10.285421,0.005 c 0,-4.74657 3.822937,-8.56814 8.5711834,-8.56814 v -10.28846 z" />
   </g>
   <rect
@@ -249,7 +249,7 @@
        width="12"
        height="12"
        id="rect1749"
-       style="opacity:0.15;fill:url(#linearGradient4920);stroke-width:0.763774" />
+       style="opacity:0;fill:url(#linearGradient4920);stroke-width:0.763774" />
   </g>
   <g
      id="mask-top"

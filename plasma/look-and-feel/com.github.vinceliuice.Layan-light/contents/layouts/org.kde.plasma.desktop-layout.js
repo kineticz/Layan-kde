@@ -196,7 +196,7 @@ var layout = {
             },
             "floating": "0",
             "height": 2.0,
-            "hiding": "dodge-windows",
+            "hiding": "autohide",
             "location": "left",
             "maximumLength": 50.94444444444444,
             "minimumLength": 34.833333333333336,
@@ -209,3 +209,19 @@ var layout = {
 ;
 
 plasma.loadSerializedLayout(layout);
+
+// Smart sizing for vertical (left/right) panel: 50% - 80% of screen height.
+// Serialized minimumLength/maximumLength above are in gridUnit (~18px); we
+// override here in actual pixels via the imperative scripting API.
+for (var __i in panelIds) {
+    var __p = panelById(panelIds[__i]);
+    if (__p.location === "left" || __p.location === "right") {
+        var __g = screenGeometry(__p.screen);
+        __p.lengthMode = "custom";
+        __p.minimumLength = Math.round(__g.height * 0.5);
+        __p.maximumLength = Math.round(__g.height * 0.8);
+        __p.length = Math.round(__g.height * 0.8);
+        __p.floating = false;
+        __p.hiding = "autohide";
+    }
+}
