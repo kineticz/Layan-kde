@@ -2639,7 +2639,7 @@
        y="584.57"
        width="20"
        height="20"
-       opacity=".01" />
+       opacity=".8" />
     <rect
        id="menubar-normal-left"
        transform="rotate(90)"
@@ -2647,7 +2647,7 @@
        y="-289.05"
        width="20"
        height="5"
-       opacity=".01" />
+       opacity=".8" />
     <rect
        id="menubar-normal-topleft"
        transform="rotate(90)"
@@ -2655,14 +2655,14 @@
        y="-289.05"
        width="5"
        height="5"
-       opacity=".01" />
+       opacity=".8" />
     <rect
        id="menubar-normal-top"
        x="289.05"
        y="579.57"
        width="20"
        height="5"
-       opacity=".01" />
+       opacity=".8" />
     <rect
        id="menubar-normal-right"
        transform="rotate(90)"
@@ -2670,7 +2670,7 @@
        y="-314.05"
        width="20"
        height="5"
-       opacity=".01" />
+       opacity=".8" />
     <rect
        id="menubar-normal-topright"
        transform="rotate(90)"
@@ -2678,7 +2678,7 @@
        y="-314.05"
        width="5"
        height="5"
-       opacity=".01" />
+       opacity=".8" />
   </g>
   <g
      id="menubar-normal-bottomleft"
@@ -2690,7 +2690,7 @@
        width="5"
        height="1"
        fill="#31313a"
-       opacity=".01" />
+       opacity=".8" />
   </g>
   <g
      id="menubar-normal-bottomright"
@@ -2702,7 +2702,7 @@
        width="5"
        height="1"
        fill="#31313a"
-       opacity=".01" />
+       opacity=".8" />
   </g>
   <g
      id="menubar-normal-bottom"
@@ -2714,7 +2714,7 @@
        width="20"
        height="1"
        fill="#31313a"
-       opacity=".01" />
+       opacity=".8" />
   </g>
   <rect
      id="tab-tear"

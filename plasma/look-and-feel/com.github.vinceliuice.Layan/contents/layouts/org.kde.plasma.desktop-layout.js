@@ -165,15 +165,17 @@ var layout = {
                     "PreloadWeight": "42"
                 }
             },
+            "floating": "1",
             "height": 1.7777777777777777,
             "hiding": "normal",
             "location": "top",
             "maximumLength": 75.88888888888889,
             "minimumLength": 75.88888888888889,
-            "offset": 0
+            "offset": 0,
+            "opacity": "0"
         },
         {
-            "alignment": "left",
+            "alignment": "center",
             "applets": [
                 {
                     "config": {
@@ -192,12 +194,14 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 }
             },
+            "floating": "0",
             "height": 2.0,
             "hiding": "dodge-windows",
             "location": "left",
             "maximumLength": 50.94444444444444,
             "minimumLength": 34.833333333333336,
-            "offset": 0
+            "offset": 0,
+            "opacity": "0"
         }
     ],
     "serializationFormatVersion": "1"
