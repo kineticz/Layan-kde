@@ -2,6 +2,39 @@
 
 ROOT_UID=0
 
+install_fedora_deps() {
+  if [ ! -r /etc/os-release ]; then
+    return
+  fi
+
+  . /etc/os-release
+
+  if [ "${ID}" != "fedora" ] && [[ ! " ${ID_LIKE:-} " == *" fedora "* ]]; then
+    return
+  fi
+
+  echo "Fedora detected — installing Kvantum packages..."
+
+  local pkgs=()
+  dnf list --installed kvantum-qt6 >/dev/null 2>&1 || pkgs+=(kvantum-qt6)
+  dnf list --installed kvantum >/dev/null 2>&1 || pkgs+=(kvantum)
+
+  if [ ${#pkgs[@]} -eq 0 ]; then
+    echo "Kvantum already installed — skipping."
+    return
+  fi
+
+  if [ "$UID" -eq "$ROOT_UID" ]; then
+    dnf install -y "${pkgs[@]}"
+  elif command -v sudo >/dev/null 2>&1; then
+    sudo dnf install -y "${pkgs[@]}"
+  else
+    echo "WARN: not root and no sudo found — skipping Kvantum install. Run: dnf install ${pkgs[*]}"
+  fi
+}
+
+install_fedora_deps
+
 # Destination directory
 if [ "$UID" -eq "$ROOT_UID" ]; then
   AURORAE_DIR="/usr/share/aurorae/themes"
